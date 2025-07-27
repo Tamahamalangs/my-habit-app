@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Habit Tracker</title>
+</head>
+
+<body>
+    <h1>Today's Habits</h1>
+    <ul id="habit-list">
+        <li><input type="checkbox" id="habit1"> Drink Water</li>
+        <li><input type="checkbox" id="habit2"> Study for 30 mins</li>
+        <li><input type="checkbox" id="habit3"> Exercise</li>
+    </ul>
+    <button onclick="resetHabits()">Reset</button>
+    <script src="app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+</body>
+
+</html>
