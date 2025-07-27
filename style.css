@@ -23,3 +23,35 @@ button {
     padding: 10px 20px;
     font-size: 16px;
 }
+
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f0f0f0;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: none;
+}
+
+nav button:hover {
+    background-color: #ddd;
+}

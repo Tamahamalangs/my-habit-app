@@ -18,3 +18,13 @@ function resetHabits() {
         localStorage.setItem(`habit${i}`, false);
     }
 }
+
+if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+
+function switchScreen(id) {
+      const screens = document.querySelectorAll('.screen');
+      screens.forEach(screen => screen.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }

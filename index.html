@@ -10,19 +10,41 @@
 </head>
 
 <body>
-    <h1>Today's Habits</h1>
-    <ul id="habit-list">
-        <li><input type="checkbox" id="habit1"> Drink Water</li>
-        <li><input type="checkbox" id="habit2"> Study for 30 mins</li>
-        <li><input type="checkbox" id="habit3"> Exercise</li>
-    </ul>
-    <button onclick="resetHabits()">Reset</button>
+
+    <!-- Screens -->
+    <div id="home" class="screen active">
+        <h1>Today's Schedule</h1>
+        <p>Tasks will appear here.</p>
+        <ul id="habit-list">
+            <li><input type="checkbox" id="habit1"> Drink Water</li>
+            <li><input type="checkbox" id="habit2"> Study for 30 mins</li>
+            <li><input type="checkbox" id="habit3"> Exercise</li>
+        </ul>
+        <button onclick="resetHabits()">Reset</button>
+    </div>
+
+    <div id="progress" class="screen">
+        <h1>Progress</h1>
+        <p>Your streaks, stats, etc.</p>
+    </div>
+
+    <div id="focus" class="screen">
+        <h1>Focus Areas</h1>
+        <p>Choose what you want to work on.</p>
+    </div>
+
+    <div id="settings" class="screen">
+        <h1>Settings</h1>
+        <p>Customize your app experience.</p>
+    </div>
+
+    <nav>
+        <button onclick="switchScreen('home')">Home</button>
+        <button onclick="switchScreen('progress')">Progress</button>
+        <button onclick="switchScreen('focus')">Focus</button>
+        <button onclick="switchScreen('settings')">Settings</button>
+    </nav>
     <script src="app.js"></script>
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js");
-        }
-    </script>
 </body>
 
 </html>
