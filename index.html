@@ -16,14 +16,28 @@
 
     <!-- Screens -->
     <div id="home" class="screen active">
-        <h1>Today's Schedule</h1>
-        <p>Tasks will appear here.</p>
-        <ul id="habit-list">
-            <li><input type="checkbox" id="habit1"> Drink Water</li>
-            <li><input type="checkbox" id="habit2"> Study for 30 mins</li>
-            <li><input type="checkbox" id="habit3"> Exercise</li>
-        </ul>
-        <button onclick="resetHabits()">Reset</button>
+        <div class="home-header">
+            <h2>Today's Schedule</h2>
+        </div>
+
+        <div class="task-list">
+            <div class="task-card">
+                <div class="task-time">6:30</div>
+                <div class="task-label">Task 1</div>
+                <input type="checkbox" class="task-check">
+            </div>
+            <div class="task-card">
+                <div class="task-time">7:00</div>
+                <div class="task-label">Task 2</div>
+                <input type="checkbox" class="task-check">
+            </div>
+            <div class="task-card">
+                <div class="task-time">8:30</div>
+                <div class="task-label">Task 3</div>
+                <input type="checkbox" class="task-check">
+            </div>
+        </div>
+
     </div>
 
     <div id="progress" class="screen">
