@@ -50,3 +50,30 @@ function switchScreen(id) {
     if (id === "home") setupHomeCheckboxes(); // only run this when Home is shown
 }
 
+
+window.addEventListener("DOMContentLoaded", function () {
+  const goal = 10; // weekly goal in hours
+  const studyProgress = document.getElementById("studyProgress");
+  const studyLabel = document.getElementById("studyLabel");
+  const addHourBtn = document.getElementById("addHourBtn");
+
+  // Load saved hours
+  let hours = parseInt(localStorage.getItem("hoursStudied") || "0");
+
+  function updateProgress() {
+    const percent = Math.min((hours / goal) * 100, 100);
+    studyProgress.style.width = percent + "%";
+    studyLabel.textContent = `${hours} / ${goal} hrs`;
+  }
+
+  updateProgress();
+
+  if (addHourBtn) {
+    addHourBtn.addEventListener("click", () => {
+      hours += 1;
+      localStorage.setItem("hoursStudied", hours);
+      updateProgress();
+    });
+  }
+});
+

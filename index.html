@@ -42,7 +42,19 @@
 
     <div id="progress" class="screen">
         <h1>Progress</h1>
-        <p>Your streaks, stats, etc.</p>
+        <div class="weekly-progress">
+            <h2>Weekly Progress</h2>
+
+            <div class="weekly-task">
+                <p>Total Hours Studied</p>
+                <div class="progress-bar">
+                    <div id="studyProgress" class="progress" style="width: 0%"></div>
+                </div>
+                <p id="studyLabel">0 / 10 hrs</p>
+                <button id="addHourBtn">+1 Hour</button>
+            </div>
+        </div>
+
     </div>
 
     <div id="focus" class="screen">
