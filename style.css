@@ -9,6 +9,11 @@ h1 {
     font-size: 24px;
 }
 
+h2{
+    font-size: 50px;
+    color: rgb(250,250,250);
+}
+
 button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -47,13 +52,17 @@ nav button:hover {
     background-color: #ddd;
 }
 
-.home-header {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  background-color: rgb(48, 18, 48);
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
 .task-list {
